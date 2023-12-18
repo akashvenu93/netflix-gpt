@@ -12,10 +12,10 @@ const useNowPlayingMovies = () => {
       OPTIONS_DATA
     );
     const json = await data.json();
-    dispatch(addNowPlayingMovies(json.results));
+    dispatch(addNowPlayingMovies(json?.results));
   };
 
-  useEffect(() => {
+  useEffect(() => { 
     getMoviesList();
   }, []);
 };
